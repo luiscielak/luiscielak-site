@@ -8,6 +8,7 @@ export function getStaticPaths() {
 }
 
 const { study } = Astro.props;
+const isVideo = (path: string) => path.endsWith(".mp4") || path.endsWith(".webm");
 ---
 <BaseLayout title={`${study.title} – Luis Cielak`} description={study.summary} image={study.cover} canonicalPath={`/${study.slug}`}>
   <main id="content" style={`--accent: ${study.accent}`}>
@@ -89,7 +90,11 @@ const { study } = Astro.props;
           ))}
         </div>
         <div class="case-images">
-          {study.images.slice(0, 2).map((image) => <img src={image} alt={`${study.title} supporting image`} loading="lazy" />)}
+          {study.images.slice(0, 2).map((image) => isVideo(image) ? (
+            <video src={image} aria-label={`${study.title} supporting video`} autoplay muted loop playsinline preload="metadata"></video>
+          ) : (
+            <img src={image} alt={`${study.title} supporting image`} loading="lazy" />
+          ))}
         </div>
       </div>
     </section>
@@ -105,7 +110,11 @@ const { study } = Astro.props;
         <ul class="clean">{study.decisions.map((item) => <li>{item}</li>)}</ul>
         <p>{study.decisionNote}</p>
         <div class="case-images">
-          {study.images.slice(2).map((image) => <img src={image} alt={`${study.title} design image`} loading="lazy" />)}
+          {study.images.slice(2).map((image) => isVideo(image) ? (
+            <video src={image} aria-label={`${study.title} design video`} autoplay muted loop playsinline preload="metadata"></video>
+          ) : (
+            <img src={image} alt={`${study.title} design image`} loading="lazy" />
+          ))}
         </div>
       </div>
     </section>

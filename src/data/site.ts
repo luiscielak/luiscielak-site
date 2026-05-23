@@ -136,7 +136,7 @@ export const caseStudies: CaseStudy[] = [
     impact: ["🛡️ Fraud losses were completely eradicated, saving $650K annually.", "💰 New enterprise capabilities generated $3.1M in revenue in the first year.", "📈 The project achieved a 575% ROI."],
     outcomeQuote: { name: "Laura M.", role: "Vice President of Operations", quote: "The transformation not only eradicated fraud but also streamlined our operations, leading to a substantial reduction in support overhead and a significant boost in client satisfaction." },
     reflection: "Every design decision must be measured against revenue generation, operational efficiency, and user adoption metrics. Enterprise UX leadership requires connecting user experience improvements directly to business outcomes and stakeholder value rather than focusing solely on interface aesthetics or usability metrics.",
-    images: ["/assets/pmi-pp-research.png", "/assets/pmi-pp-design.gif", "/assets/pmi-pp-outcome.png"],
+    images: ["/assets/pmi-pp-research.png", "/assets/pmi-pp-design.mp4", "/assets/pmi-pp-outcome.png"],
     audio: "/audio/pmi-pp-highlights.mp3",
     audioDuration: "1:44",
   },
