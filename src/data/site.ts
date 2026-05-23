@@ -1,4 +1,7 @@
 
+export const siteUrl = "https://luiscielak.com";
+export const siteTitle = "Luis Cielak – Lead Product Designer";
+export const siteDescription = "Turning complexity into clarity. UX, UXR, UI, DataViz.";
 export const resumeUrl = "https://www.dropbox.com/scl/fi/fc4jvqe5lenqesndaphqs/lcielak_resume.pdf?rlkey=zkamom1bjd4t4vjq0i0ibjuvd&e=1&st=710eqeqc&dl=1";
 
 export const services = [

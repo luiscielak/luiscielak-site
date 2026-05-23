@@ -9,8 +9,8 @@ export function getStaticPaths() {
 
 const { study } = Astro.props;
 ---
-<BaseLayout title={`${study.title} – Luis Cielak`} description={study.summary}>
-  <main style={`--accent: ${study.accent}`}>
+<BaseLayout title={`${study.title} – Luis Cielak`} description={study.summary} image={study.cover} canonicalPath={`/${study.slug}`}>
+  <main id="content" style={`--accent: ${study.accent}`}>
     <section class="case-hero">
       <div>
         <p class="kicker">Case Study</p>
