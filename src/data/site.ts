@@ -51,11 +51,13 @@ export type CaseStudy = {
   challengeIntro: string;
   challenge: string[];
   solution: string[];
+  solutionIntro: string;
   research: string;
   methods: string[];
   findings: string[];
   quotes: { name: string; role: string; quote: string }[];
   workflow: string;
+  decisionIntro: string;
   decisions: string[];
   decisionNote: string;
   outcome: string;
@@ -82,6 +84,7 @@ export const caseStudies: CaseStudy[] = [
     overview: ["A global certification body served over 250,000 learners but its digital experience was fragmented, leaving users frustrated and support teams overwhelmed. I led the UX overhaul to deliver a cohesive, guided certification journey."],
     challengeIntro: "The process was disjointed and confusing:",
     challenge: ["No Clear Guidance: Learners didn’t know where to start.", "High Drop-Offs: 40% of users abandoned midway.", "Disconnected Systems: Frustrating system switching.", "Low Trust: International learners were unsure of the right path."],
+    solutionIntro: "We redesigned the experience with:",
     solution: ["Unified certification pathways.", "Guided dashboards and visual progress tracking.", "Embedded contextual support.", "Fully mobile-responsive design."],
     research: "Our research focused on understanding how working professionals engage with professional development platforms and identifying key barriers to certification completion. Through a mixed-methods approach combining quantitative analytics and qualitative user research, we uncovered critical insights that shaped our design strategy.",
     methods: ["In-depth interviews and usability testing with 37 platform users", "Analysis of learning analytics from 500+ sessions and heatmap tracking", "Survey responses from 100+ global learners and support ticket review"],
@@ -91,6 +94,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "Skyler R.", role: "Returning Member", quote: "I just wanted a roadmap: where I am now, what’s next, and how far I’ve come." },
     ],
     workflow: "Discovery → Sign Up → Enrollment → Exam → Credentialing",
+    decisionIntro: "A look at the key design moves that clarified complex flows and improved learner confidence.",
     decisions: ["📊 Unified dashboard", "🗺️ Visual journey map", "🛠️ Contextual tooltips + guidance", "📱 Mobile-first layouts"],
     decisionNote: "Iterated to simplify language, highlight milestones, and optimize the dashboard.",
     outcome: "The final solution included a guided certification experience, progress visibility, contextual help, and a responsive interface built to support global learners across devices.",
@@ -112,9 +116,10 @@ export const caseStudies: CaseStudy[] = [
       { value: "$3.75M", label: "Total Business Impact" },
       { value: "575%", label: "ROI Achievement" },
     ],
-    overview: ["An enterprise learning platform was losing $650K annually to promo code fraud while missing millions in Fortune 500 revenue. The consumer-focused system lacked the security, compliance, and administrative controls enterprise clients demanded. Research revealed our B2C discount model was incompatible with enterprise procurement processes. The challenge: align Legal, Sales, and IT while transforming a cost center into a profit driver."],
+    overview: ["An enterprise learning platform was losing $650K annually to promo code fraud while missing millions in Fortune 500 revenue. The consumer-focused system lacked the security, compliance, and administrative controls enterprise clients demanded. Research revealed our B2C discount model was incompatible with enterprise procurement processes. The challenge: align Legal (security), Sales (growth), and IT (simplicity) while transforming a cost center into a profit driver."],
     challengeIntro: "The existing system was fundamentally broken:",
     challenge: ["Massive Fraud: 92% of promotional code usage was unauthorized, $650,000 lost annually to code abuse.", "Security Vulnerabilities: Codes leaked weekly on Reddit and social platforms.", "Poor Visibility: Organizations had no insight into employee purchasing patterns.", "Support Overload: Teams overwhelmed with fraud-related tickets."],
+    solutionIntro: "We created an enterprise-ready access model with:",
     solution: ["Secure single sign-on through corporate email domains", "Custom approval workflows and usage monitoring", "Personalized product catalogs with automatic pricing", "Automated provisioning for enterprise teams", "Streamlined checkout with reimbursement documentation"],
     research: "Conducted 15 strategic stakeholder interviews across Legal, Sales, IT, and Fortune 500 procurement teams to understand the intersection of security requirements, business growth needs, and technical constraints. The research approach focused on identifying systemic issues beyond the surface-level fraud problem.",
     methods: ["15 in-depth stakeholder interviews across Sales Leadership, Operations Teams, Compliance Officers, and Fortune 500 Procurement teams.", "Research into revenue impact, fraud management processes, security requirements, and enterprise buying behaviors.", "Collaborative synthesis workshops to identify systemic patterns and strategic opportunities."],
@@ -124,6 +129,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "Sarah W.", role: "Director of Enterprise Sales", quote: "Understanding the unique needs of our enterprise clients through in-depth research allowed us to tailor our solutions effectively, turning a significant challenge into a competitive advantage." },
     ],
     workflow: "Enterprise Discovery → Domain Authentication → Role Assignment → Platform Access → Usage Monitoring",
+    decisionIntro: "Instead of asking “How do we fix promo codes?” I reframed the challenge to “What’s preventing us from scaling with enterprise clients?” This shift in perspective revealed that our B2C discount model was fundamentally incompatible with enterprise procurement processes and compliance requirements.",
     decisions: ["🔐 Domain-Based Authentication Over Manual Verification", "👥 Role-Based Access Controls Over Fixed Permissions", "📊 Real-Time Usage Analytics Over Periodic Reports", "🌐 Regional Customization Over Global Standardization"],
     decisionNote: "Together, these decisions created a secure, scalable platform that addressed enterprise needs while eliminating fraud vulnerabilities and enabling new revenue opportunities.",
     outcome: "The transformation of the enterprise learning platform's security architecture resulted in significant business and operational impacts. The initiative eliminated fraud, unlocked new revenue opportunities, and set a foundation for future growth.",
@@ -148,8 +154,9 @@ export const caseStudies: CaseStudy[] = [
     overview: ["A nationwide logistics company was coordinating over 100,000 specialized moves annually using outdated methods—paper schedules, Excel sheets, and PDF forms. Technicians in the field lacked a cohesive digital tool, leading to inefficiencies and miscommunication across teams.", "I led the UX design of a mobile-first dispatch platform that modernized operations, offering real-time visibility and intuitive tools tailored for technicians and dispatchers alike."],
     challengeIntro: "The dispatch process was fragmented and manual, causing frequent delays and errors:",
     challenge: ["Paperwork Overload: Manual job tracking increased error rates.", "No Real-Time Updates: Dispatchers lacked visibility into field progress.", "Poor Usability: Tools weren’t optimized for mobile use in the field."],
+    solutionIntro: "We delivered a mobile-first operating layer with:",
     solution: ["Centralized job information and status tracking", "Offline functionality and mobile-first design.", "Real-time job assignment, tracking, and rerouting."],
-    research: "We built a digital dispatch platform optimized for field use and HQ monitoring by grounding design decisions in field research and operational constraints.",
+    research: "We built a digital dispatch platform optimized for field use and HQ monitoring, grounding design decisions in field research and operational constraints.",
     methods: ["Shadowed dispatchers and rode along with technicians", "10+ contextual interviews"],
     findings: ["Spotty Connectivity: Offline access was critical", "Simplicity First: Field techs wanted less clutter, clearer visibility", "Visibility Gaps: Dispatchers needed real-time insights"],
     quotes: [
@@ -157,6 +164,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "Taylor S.", role: "Field Technician", quote: "I don’t need a ton of features—just my list of jobs and a quick way to mark them done." },
     ],
     workflow: "Dispatch → Technician View → Progress → Completion Sync",
+    decisionIntro: "A look at the pivotal design decisions that shaped the experience, balancing real-world constraints with user needs.",
     decisions: ["📅 Simplified daily scheduling", "🗂️ Job cards with detailed instructions", "👆 One-tap status updates", "📈 Dispatcher dashboard for live monitoring"],
     decisionNote: "Usability tests led to offline sync, larger tap targets, and UI refinements.",
     outcome: "The final solution included a mobile interface for technicians to track jobs, a real-time console for dispatchers, and a modular design system built for future scalability.",

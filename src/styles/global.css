@@ -114,6 +114,8 @@ p { color: var(--muted); line-height: 1.72; font-size: clamp(1rem, 1.25vw, 1.16r
 .case-hero { display: grid; grid-template-columns: 1fr 0.8fr; gap: 42px; align-items: center; padding: 96px 0 48px; }
 .case-hero h1 { font-size: clamp(3.2rem, 7vw, 7.2rem); }
 .case-summary { border-left: 4px solid var(--accent); padding-left: 22px; }
+.case-summary p { margin: 0; }
+.case-summary p + p { margin-top: 8px; }
 .audio-card { margin-top: 24px; padding: 18px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,0.045); display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 18px; align-items: center; }
 .audio-card h2 { font-size: clamp(1.25rem, 2vw, 1.9rem); letter-spacing: -0.03em; margin: 2px 0 4px; }
 .audio-card p { margin: 0; }

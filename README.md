@@ -21,4 +21,8 @@ Recommended: Cloudflare Pages.
 ## Content model
 
 Main content lives in `src/data/site.ts`.
-Images live in `public/assets/` and were copied from the public Framer site so the new site does not depend on Framer asset URLs at runtime.
+Images live in `public/assets/` and audio recaps live in `public/audio/`; both were copied from the public Framer site so the new site does not depend on Framer asset URLs at runtime.
+
+## QA
+
+Migration parity notes and route checks live in `MIGRATION_QA.md`.

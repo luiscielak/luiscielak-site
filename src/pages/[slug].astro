@@ -16,7 +16,10 @@ const { study } = Astro.props;
         <p class="kicker">Case Study</p>
         <h1>{study.title}</h1>
         <p class="lede">{study.eyebrow}</p>
-        <p class="case-summary">{study.summary}</p>
+        <div class="case-summary">
+          <p class="kicker">TL;DR</p>
+          <p>{study.summary}</p>
+        </div>
         <section class="audio-card" aria-labelledby="audio-heading">
           <div>
             <p class="kicker">Hear the highlights</p>
@@ -53,6 +56,7 @@ const { study } = Astro.props;
           </article>
           <article class="info-card">
             <h3>Solution</h3>
+            <p>{study.solutionIntro}</p>
             <ul class="clean">{study.solution.map((item) => <li>{item}</li>)}</ul>
           </article>
         </div>
@@ -96,6 +100,7 @@ const { study } = Astro.props;
         <h2>Key moves that clarified complex workflows.</h2>
       </div>
       <div>
+        <p>{study.decisionIntro}</p>
         <p class="workflow">{study.workflow}</p>
         <ul class="clean">{study.decisions.map((item) => <li>{item}</li>)}</ul>
         <p>{study.decisionNote}</p>
