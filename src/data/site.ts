@@ -63,6 +63,8 @@ export type CaseStudy = {
   outcomeQuote: { name: string; role: string; quote: string };
   reflection: string;
   images: string[];
+  audio: string;
+  audioDuration: string;
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -96,6 +98,8 @@ export const caseStudies: CaseStudy[] = [
     outcomeQuote: { name: "Casey B.", role: "Learner Feedback", quote: "This new platform is exactly what I needed—everything is clear now, and it feels so much easier to keep going." },
     reflection: "Clear guidance and embedded help boosted user confidence and outcomes. Earlier international user testing would have strengthened localization.",
     images: ["/assets/pmi-da-research.png", "/assets/pmi-da-design.png", "/assets/pmi-da-outcome.png"],
+    audio: "/audio/pmi-da-highlights.mp3",
+    audioDuration: "1:57",
   },
   {
     slug: "case-study-pmi-pp",
@@ -127,6 +131,8 @@ export const caseStudies: CaseStudy[] = [
     outcomeQuote: { name: "Laura M.", role: "Vice President of Operations", quote: "The transformation not only eradicated fraud but also streamlined our operations, leading to a substantial reduction in support overhead and a significant boost in client satisfaction." },
     reflection: "Every design decision must be measured against revenue generation, operational efficiency, and user adoption metrics. Enterprise UX leadership requires connecting user experience improvements directly to business outcomes and stakeholder value rather than focusing solely on interface aesthetics or usability metrics.",
     images: ["/assets/pmi-pp-research.png", "/assets/pmi-pp-design.gif", "/assets/pmi-pp-outcome.png"],
+    audio: "/audio/pmi-pp-highlights.mp3",
+    audioDuration: "1:44",
   },
   {
     slug: "case-study-mss",
@@ -158,6 +164,8 @@ export const caseStudies: CaseStudy[] = [
     outcomeQuote: { name: "Alex B.", role: "Operations Manager", quote: "It’s night and day from before. Dispatch is faster, and my techs are way more confident in the field." },
     reflection: "Designing for real-world constraints like low connectivity and gloves-on usage was key. Prioritizing early-stage field testing was crucial for the success of the project.",
     images: ["/assets/mss-research.jpg", "/assets/mss-journey.jpg", "/assets/mss-design.png", "/assets/mss-outcome.gif"],
+    audio: "/audio/mss-highlights.mp3",
+    audioDuration: "1:52",
   },
 ];
 

@@ -17,6 +17,16 @@ const { study } = Astro.props;
         <h1>{study.title}</h1>
         <p class="lede">{study.eyebrow}</p>
         <p class="case-summary">{study.summary}</p>
+        <section class="audio-card" aria-labelledby="audio-heading">
+          <div>
+            <p class="kicker">Hear the highlights</p>
+            <h2 id="audio-heading">Audio recap</h2>
+            <p>{study.audioDuration} narrated overview</p>
+          </div>
+          <audio controls preload="metadata" src={study.audio}>
+            <a href={study.audio}>Download the audio recap</a>
+          </audio>
+        </section>
         <div class="stat-grid">
           {study.stats.map((stat) => (
             <div class="stat"><strong>{stat.value}</strong><span>{stat.label}</span></div>

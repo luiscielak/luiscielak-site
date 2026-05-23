@@ -114,6 +114,10 @@ p { color: var(--muted); line-height: 1.72; font-size: clamp(1rem, 1.25vw, 1.16r
 .case-hero { display: grid; grid-template-columns: 1fr 0.8fr; gap: 42px; align-items: center; padding: 96px 0 48px; }
 .case-hero h1 { font-size: clamp(3.2rem, 7vw, 7.2rem); }
 .case-summary { border-left: 4px solid var(--accent); padding-left: 22px; }
+.audio-card { margin-top: 24px; padding: 18px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,0.045); display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 18px; align-items: center; }
+.audio-card h2 { font-size: clamp(1.25rem, 2vw, 1.9rem); letter-spacing: -0.03em; margin: 2px 0 4px; }
+.audio-card p { margin: 0; }
+.audio-card audio { width: 100%; accent-color: var(--accent); }
 .stat-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 24px; }
 .stat strong { display: block; font-size: clamp(2.4rem, 5vw, 4.8rem); letter-spacing: -0.07em; color: var(--ink); }
 .stat span { color: var(--muted); font-weight: 700; }
@@ -139,7 +143,7 @@ ul.clean li { color: #d6c8b2; line-height: 1.55; padding: 12px 14px; border: 1px
   .hero, .split, .case-hero, .two-col, .site-footer { grid-template-columns: 1fr; display: grid; }
   .hero { padding-top: 60px; }
   .hero-art { min-height: 380px; }
-  .grid-3, .services, .info-grid, .quote-grid, .case-images { grid-template-columns: 1fr; }
+  .grid-3, .services, .info-grid, .quote-grid, .case-images, .audio-card { grid-template-columns: 1fr; }
   .project-card { min-height: 420px; }
   .site-footer { align-items: start; }
   .footer-email { white-space: normal; }
