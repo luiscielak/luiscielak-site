@@ -1,0 +1,85 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { projects, services, skillTags } from "../data/site";
+---
+<BaseLayout>
+  <main>
+    <section id="hero" class="hero">
+      <div>
+        <p class="kicker">Lead Product Designer</p>
+        <h1>Turning complexity into clarity.</h1>
+        <p class="lede">Hi, I'm Luis. I design web and mobile products for B2C, B2B and SaaS teams—aligning stakeholders, simplifying decisions, and delivering business impact through collaborative sprints, strong product-engineering partnerships, and scalable systems that drive adoption and customer value.</p>
+        <a class="button" href="#projects">See Projects <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb one"></div>
+        <div class="orb two"></div>
+        <div class="hero-card">
+          <p class="kicker">Scroll down</p>
+          <h3>Selected case studies in product design, research, and systems thinking.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Selected Work</p>
+          <h2>Strategic Design for Digital Products</h2>
+        </div>
+        <p>Three representative projects showing measurable UX, business, and operational outcomes.</p>
+      </div>
+      <div class="grid-3">
+        {projects.map((project) => (
+          <a class="project-card" href={`/${project.slug}`}>
+            <img src={project.image} alt={`${project.title} project image`} loading="lazy" />
+            <div class="card-copy">
+              <p class="kicker">View Case Study</p>
+              <h3>{project.title}</h3>
+              <p>{project.summary}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="kicker">What I Do</p>
+        <h2>Design systems, research, and interfaces for complex products.</h2>
+        <p>I help product teams bring clarity to complex systems—whether that means improving usability, visualizing data, or scaling design infrastructure. My work spans product strategy, research, interface design, and data storytelling—all rooted in systems thinking and business impact.</p>
+        <div class="services">
+          {services.map((service) => (
+            <article class="service-card">
+              <h3>{service.title}</h3>
+              <p>{service.copy}</p>
+            </article>
+          ))}
+        </div>
+        <div class="marquee" aria-label="Capabilities">
+          {skillTags.map((tag) => <span>{tag}</span>)}
+        </div>
+      </div>
+      <div class="image-frame">
+        <img src="/assets/about-design.jpg" alt="Design process materials" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="about-me" class="section split">
+      <div>
+        <p class="kicker">Meet Luis</p>
+        <h2>Product design rooted in craft, empathy, and measurable results.</h2>
+        <p>I’m Luis Cielak, a Lead Product Designer based in Philadelphia, originally from Mexico City. I help organizations turn complex ideas into clear, intuitive digital experiences—with craft, empathy, and measurable results.</p>
+        <p>My design journey didn’t start with wireframes. It began with asking better questions: Why is this broken? What’s standing in the user’s way? How do we make this simpler, faster, or more humane?</p>
+        <p>Over the past decade, I’ve led design across fintech, B2C, B2B SaaS, e-commerce, and data-rich platforms—often working on products where the stakes are high and the systems are complex. Whether I’m building a design system, running discovery workshops, or shaping strategy with stakeholders, I focus on delivering clarity—for users and for the business.</p>
+        <p>I thrive in ambiguity and love connecting dots across research, interface design, and information architecture. I believe great UX is invisible but undeniable—it builds trust, reduces friction, and scales beautifully.</p>
+        <p>When I’m not in Figma or interviewing users, you’ll find me brewing kombucha, perfecting a sourdough culture, or teaching design workshops. (And yes, all three involve fermentation, iteration, and a bit of magic.)</p>
+        <p>Let’s build something insightful, rigorous, and a little unexpected.</p>
+      </div>
+      <div class="image-frame">
+        <img src="/assets/profile.jpg" alt="Luis Cielak portrait" loading="lazy" />
+      </div>
+    </section>
+  </main>
+</BaseLayout>

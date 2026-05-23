@@ -1,0 +1,45 @@
+
+---
+import "../styles/global.css";
+import { resumeUrl } from "../data/site";
+const { title = "Luis Cielak – Lead Product Designer", description = "Turning complexity into clarity. UX, UXR, UI, DataViz." } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/profile.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/#hero" aria-label="Luis Cielak home">
+        <img src="/assets/logo.svg" alt="Luis Cielak" />
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/#hero">Home</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#about-me">About</a>
+        <a href={resumeUrl}>Resume</a>
+      </nav>
+    </header>
+    <slot />
+    <footer class="site-footer">
+      <div>
+        <h2>Designing with purpose, clarity, and real-world impact. Rooted in research. Guided by systems. Delivered with care.</h2>
+        <div class="socials">
+          <a href="https://linkedin.com/in/cielak" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://github.com/luiscielak" aria-label="GitHub">GitHub</a>
+          <a href="mailto:luis@luiscielak.com" aria-label="Email">Email</a>
+        </div>
+      </div>
+      <a class="footer-email" href="mailto:luis@luiscielak.com">luis@luiscielak.com</a>
+    </footer>
+  </body>
+</html>

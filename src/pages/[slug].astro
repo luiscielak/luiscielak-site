@@ -1,0 +1,121 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { caseStudies } from "../data/site";
+
+export function getStaticPaths() {
+  return caseStudies.map((study) => ({ params: { slug: study.slug }, props: { study } }));
+}
+
+const { study } = Astro.props;
+---
+<BaseLayout title={`${study.title} – Luis Cielak`} description={study.summary}>
+  <main style={`--accent: ${study.accent}`}>
+    <section class="case-hero">
+      <div>
+        <p class="kicker">Case Study</p>
+        <h1>{study.title}</h1>
+        <p class="lede">{study.eyebrow}</p>
+        <p class="case-summary">{study.summary}</p>
+        <div class="stat-grid">
+          {study.stats.map((stat) => (
+            <div class="stat"><strong>{stat.value}</strong><span>{stat.label}</span></div>
+          ))}
+        </div>
+      </div>
+      <div class="image-frame">
+        <img src={study.cover} alt={`${study.title} hero image`} />
+      </div>
+    </section>
+
+    <section class="case-section two-col">
+      <div>
+        <p class="kicker">Overview</p>
+        <h2>Problem, constraints, and product direction.</h2>
+      </div>
+      <div>
+        {study.overview.map((paragraph) => <p>{paragraph}</p>)}
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Challenge</h3>
+            <p>{study.challengeIntro}</p>
+            <ul class="clean">{study.challenge.map((item) => <li>{item}</li>)}</ul>
+          </article>
+          <article class="info-card">
+            <h3>Solution</h3>
+            <ul class="clean">{study.solution.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section two-col">
+      <div>
+        <p class="kicker">Research & Insights</p>
+        <h2>Understanding behavior before designing the system.</h2>
+      </div>
+      <div>
+        <p>{study.research}</p>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Methods</h3>
+            <ul class="clean">{study.methods.map((item) => <li>{item}</li>)}</ul>
+          </article>
+          <article class="info-card">
+            <h3>Findings</h3>
+            <ul class="clean">{study.findings.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        </div>
+        <div class="quote-grid">
+          {study.quotes.map((quote) => (
+            <figure class="quote">
+              <blockquote>“{quote.quote}”</blockquote>
+              <cite>{quote.name} · {quote.role}</cite>
+            </figure>
+          ))}
+        </div>
+        <div class="case-images">
+          {study.images.slice(0, 2).map((image) => <img src={image} alt={`${study.title} supporting image`} loading="lazy" />)}
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section two-col">
+      <div>
+        <p class="kicker">Design Decisions</p>
+        <h2>Key moves that clarified complex workflows.</h2>
+      </div>
+      <div>
+        <p class="workflow">{study.workflow}</p>
+        <ul class="clean">{study.decisions.map((item) => <li>{item}</li>)}</ul>
+        <p>{study.decisionNote}</p>
+        <div class="case-images">
+          {study.images.slice(2).map((image) => <img src={image} alt={`${study.title} design image`} loading="lazy" />)}
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section two-col">
+      <div>
+        <p class="kicker">Outcome</p>
+        <h2>Measurable impact and operational change.</h2>
+      </div>
+      <div>
+        <p>{study.outcome}</p>
+        <ul class="clean">{study.impact.map((item) => <li>{item}</li>)}</ul>
+        <figure class="quote">
+          <blockquote>“{study.outcomeQuote.quote}”</blockquote>
+          <cite>{study.outcomeQuote.name} · {study.outcomeQuote.role}</cite>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="info-card">
+        <p class="kicker">Reflection</p>
+        <h2>{study.reflection}</h2>
+        <a class="button" href="/#projects">Back to projects</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
