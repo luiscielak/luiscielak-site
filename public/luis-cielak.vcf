@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Cielak;Luis;;;
+FN:Luis Cielak
+ORG:The Hooman Loop
+TITLE:Lead Product Designer / Creative Technologist
+EMAIL;TYPE=INTERNET,WORK:luis@luiscielak.com
+URL:https://luiscielak.com
+URL;TYPE=WORK:https://thehoomanloop.com
+X-SOCIALPROFILE;TYPE=linkedin:https://linkedin.com/in/cielak
+ADR;TYPE=WORK:;;Philadelphia;PA;;;United States
+NOTE:Product designer and creative technologist helping teams turn complex products, workflows, and data into clearer digital systems.
+END:VCARD
